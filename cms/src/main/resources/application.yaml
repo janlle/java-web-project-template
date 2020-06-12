@@ -1,0 +1,29 @@
+server:
+  error:
+    whitelabel:
+      enabled: false
+  undertow:
+    accesslog:
+      enabled: true
+  connection-timeout: 10000ms
+  compression:
+    enabled: true
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+
+  jackson:
+    default-property-inclusion: always
+    serialization:
+      write-dates-as-timestamps: true
+
+  http:
+    encoding:
+      charset: UTF-8
+
+  servlet:
+    multipart:
+      max-file-size: 8MB
+      max-request-size: 8MB
